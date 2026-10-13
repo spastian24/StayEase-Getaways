@@ -1,0 +1,133 @@
+.calendar-control {
+  position: relative;
+  z-index: 8;
+}
+
+.calendar-control-trigger {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 148px;
+  min-height: 54px;
+  padding: 0 15px;
+  border: 1px solid #d9cbbb;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fffdf8, #f4ede3);
+  color: #1b1a41;
+  box-shadow: 0 8px 25px rgba(27, 26, 65, 0.05);
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.calendar-control-trigger::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border: 2px solid #9a5c52;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px #f3c1b6;
+}
+
+.calendar-control-trigger:hover,
+.calendar-control-trigger[aria-expanded="true"] {
+  border-color: #9a5c52;
+  box-shadow: 0 12px 28px rgba(125, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.calendar-control-trigger span {
+  font-size: 0.78rem;
+}
+
+.calendar-control-trigger small {
+  color: #89848b;
+  font-size: 0.67rem;
+  font-weight: 600;
+}
+
+.calendar-popover {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 272px;
+  padding: 17px;
+  border: 1px solid #eadfce;
+  border-radius: 17px;
+  background: #fffdf8;
+  box-shadow: 0 20px 50px rgba(27, 26, 65, 0.18);
+}
+
+.calendar-popover-header,
+.calendar-weekdays,
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.calendar-popover-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.calendar-popover-header strong {
+  color: #1b1a41;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.2rem;
+}
+
+.calendar-popover-header div {
+  display: flex;
+  gap: 4px;
+}
+
+.calendar-popover-header button {
+  width: 27px;
+  height: 27px;
+  border: 1px solid #e4dbcf;
+  border-radius: 8px;
+  background: #fff;
+  color: #1b1a41;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.calendar-weekdays span {
+  color: #9a5c52;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.calendar-days {
+  margin-top: 8px;
+}
+
+.calendar-days button,
+.calendar-days span {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+}
+
+.calendar-days button {
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #4e4a55;
+  font-size: 0.7rem;
+}
+
+.calendar-days button:hover {
+  background: #f7eee6;
+  color: #7d0000;
+}
+
+.calendar-days button.selected {
+  background: #1b1a41;
+  color: #fff7e1;
+  font-weight: 700;
+}

@@ -1,0 +1,361 @@
+.admin-page-shell,
+.admin-main,
+.management-page,
+.room-management-page,
+.report-panel,
+.room-card,
+.customer-workspace,
+.payment-workspace,
+.notifications-workspace {
+  min-width: 0;
+}
+
+.customer-table-scroll,
+.payment-table-scroll,
+.reports-table-scroll,
+.reservation-table-scroll,
+.booking-table-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.customer-modal-backdrop,
+.payment-modal-backdrop {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.customer-modal,
+.payment-modal {
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+}
+
+@media (max-width: 1100px) {
+  .admin-login-container {
+    height: auto;
+    min-height: 0;
+  }
+
+  .admin-brand-panel,
+  .admin-form-panel {
+    min-height: 560px;
+  }
+
+  .room-management-page {
+    padding: 36px 30px 55px;
+  }
+
+  .customer-summary-row,
+  .payment-summary-row,
+  .reports-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 850px) {
+  .admin-app-shell {
+    display: block;
+  }
+
+  .admin-page-shell {
+    margin-left: 0;
+  }
+
+  .admin-sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    background-position: center 42%;
+    box-shadow: 0 8px 22px rgba(27, 26, 65, 0.16);
+  }
+
+  .admin-sidebar-content {
+    height: auto;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 16px;
+    overflow: visible;
+  }
+
+  .admin-sidebar-brand {
+    flex-direction: row;
+    gap: 10px;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .admin-sidebar-brand img {
+    width: 76px;
+    margin: 0;
+  }
+
+  .admin-sidebar-brand span {
+    font-size: 0.55rem;
+    letter-spacing: 0.1em;
+  }
+
+  .admin-sidebar-divider {
+    display: none;
+  }
+
+  .admin-sidebar-nav {
+    min-width: 0;
+    flex-direction: row;
+    gap: 5px;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(243, 193, 182, 0.55) transparent;
+  }
+
+  .admin-nav-item {
+    width: auto;
+    min-width: max-content;
+    min-height: 40px;
+    padding: 0 12px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .admin-nav-item:hover {
+    transform: none;
+  }
+
+  .admin-sidebar-bottom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .admin-sidebar-user {
+    display: none;
+  }
+
+  .admin-logout-button {
+    width: auto;
+    min-height: 38px;
+    margin: 0;
+    padding: 0 12px;
+    white-space: nowrap;
+  }
+
+  .admin-main,
+  .booking-management-main {
+    padding: 28px 24px 46px;
+  }
+
+  .admin-topbar {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 30px;
+  }
+
+  .admin-topbar-right {
+    width: 100%;
+    min-width: 0;
+    flex-wrap: wrap;
+  }
+
+  .admin-notification-box,
+  .admin-date-box {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .admin-sidebar-content {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px 12px;
+    padding: 9px 12px;
+  }
+
+  .admin-sidebar-brand {
+    justify-content: flex-start;
+  }
+
+  .admin-sidebar-brand img {
+    width: 66px;
+  }
+
+  .admin-sidebar-brand span {
+    font-size: 0.48rem;
+  }
+
+  .admin-sidebar-nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0 -4px;
+    padding: 0 4px 3px;
+  }
+
+  .admin-nav-item {
+    min-height: 38px;
+    padding: 0 11px;
+    font-size: 0.7rem;
+  }
+
+  .admin-logout-button {
+    min-height: 34px;
+    padding: 0 9px;
+    font-size: 0.68rem;
+  }
+
+  .admin-main,
+  .booking-management-main {
+    padding: 24px 16px 40px;
+  }
+
+  .admin-welcome h1 {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+    overflow-wrap: anywhere;
+  }
+
+  .admin-welcome p {
+    font-size: 0.82rem;
+  }
+
+  .admin-topbar-right {
+    flex-direction: column;
+  }
+
+  .admin-notification-box,
+  .admin-date-box,
+  .create-reservation-top-button {
+    width: 100%;
+  }
+
+  .main-stat-grid,
+  .reservation-stat-grid,
+  .customer-summary-row,
+  .payment-summary-row,
+  .reports-metric-grid,
+  .room-status-overview {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .room-status-total {
+    grid-column: auto;
+  }
+
+  .main-stat-card,
+  .performance-card,
+  .alerts-card,
+  .quick-actions-card,
+  .report-panel {
+    padding: 18px;
+  }
+
+  .room-management-page {
+    padding: 26px 16px 40px;
+  }
+
+  .room-management-header {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .room-header-actions {
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+
+  .room-card-grid,
+  .quick-form-grid,
+  .room-amenities-form-grid,
+  .room-amenities-layout,
+  .property-amenities-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .room-card-grid {
+    padding: 16px;
+  }
+
+  .customer-toolbar,
+  .payment-toolbar,
+  .reports-hero {
+    padding: 18px;
+  }
+
+  .customer-toolbar-actions,
+  .payment-toolbar-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .customer-toolbar-actions input,
+  .payment-toolbar-actions input,
+  .payment-toolbar-actions select,
+  .customer-primary-button,
+  .payment-primary-button {
+    width: 100%;
+  }
+
+  .customer-modal-backdrop,
+  .payment-modal-backdrop {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .customer-modal,
+  .payment-modal {
+    max-height: calc(100vh - 24px);
+    padding: 20px;
+    border-radius: 16px;
+  }
+
+  .customer-modal-actions,
+  .payment-modal-actions {
+    flex-wrap: wrap;
+  }
+
+  .reports-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .reports-hero {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .report-period-tabs {
+    width: 100%;
+  }
+
+  .report-period-tabs button {
+    flex: 1;
+    padding: 0 8px;
+  }
+}
+
+@media (max-width: 380px) {
+  .admin-main,
+  .booking-management-main,
+  .room-management-page {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

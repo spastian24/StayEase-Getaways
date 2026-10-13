@@ -1,0 +1,53 @@
+.property-amenities-section{margin-top:30px;padding:30px;border:1px solid #ece5da;border-radius:20px;background:#fffdf8;box-shadow:0 14px 34px rgba(27,26,65,.07)}
+.property-amenities-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:22px}
+.property-amenities-heading span{color:#9a5c52;font-size:.63rem;font-weight:700;letter-spacing:.14em}
+.property-amenities-heading h2{margin:5px 0 0;color:#1b1a41;font-family:"Cormorant Garamond",serif;font-size:2rem}
+.property-amenities-heading p{margin:6px 0 0;color:#716e78;font-size:.75rem}
+.property-amenities-heading>strong{padding:8px 11px;border-radius:8px;background:#f6f0f7;color:#62516b;font-size:.64rem;white-space:nowrap}
+.property-amenities-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.property-amenity-card{display:grid;grid-template-columns:34px 32px minmax(0,1fr);align-items:start;gap:12px;padding:17px;border:1px solid #eee5da;border-radius:15px;background:#fff;transition:.2s ease}
+.property-amenity-card.enabled{border-color:#d7c1b5;background:#fffaf6}
+.property-amenity-card.disabled{opacity:.68;background:#faf8f5}
+.property-amenity-check{display:grid;place-items:center;width:27px;height:27px;border:1px solid #cdb8aa;border-radius:8px;background:#fff;color:#7d0000;font-size:1rem;font-weight:700;cursor:pointer}
+.property-amenity-card.enabled .property-amenity-check{border-color:#7d0000;background:#7d0000;color:#fff7e1}
+.property-amenity-number{color:#b27a6e;font-size:.65rem;font-weight:700;letter-spacing:.1em;padding-top:5px}
+.property-amenity-content{display:flex;flex-direction:column;gap:10px;min-width:0}
+.property-amenity-content label{display:flex;flex-direction:column;gap:6px;color:#9a5c52;font-size:.6rem;font-weight:700;letter-spacing:.1em}
+.property-amenity-content input,.property-amenity-content textarea{width:100%;border:1px solid #ddd5c8;border-radius:8px;background:#fff;color:#2b2b2b;font-family:inherit;font-size:.72rem;letter-spacing:0;outline:none;padding:9px}
+.property-amenity-content textarea{resize:vertical;line-height:1.45}
+.property-amenity-content input:focus,.property-amenity-content textarea:focus{border-color:#9a5c52;box-shadow:0 0 0 4px rgba(154,92,82,.08)}
+@media(max-width:850px){.property-amenities-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.property-amenities-section{padding:20px}.property-amenities-heading{flex-direction:column}}
+
+/* Keep this workspace aligned with the standard management-page shell. */
+.room-amenities-page .admin-topbar{margin-bottom:32px}
+.room-amenities-page .admin-topbar-right{gap:13px}
+.room-amenities-page .admin-notification-box{min-width:210px}
+.room-amenities-layout{grid-template-columns:250px minmax(0,1fr);gap:28px}
+.room-amenities-list,.room-amenities-editor,.property-amenities-section{border-color:#e7ded2;box-shadow:0 16px 36px rgba(27,26,65,.07)}
+.room-amenities-list{padding:24px}
+.room-amenities-list-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+.room-amenities-add-button{min-height:34px;padding:0 10px;border:1px solid #d9cbbb;border-radius:8px;background:#fff;color:#7d0000;font-size:.62rem;font-weight:700;cursor:pointer;white-space:nowrap}
+.room-amenities-add-button:hover{border-color:#9a5c52;background:#f8eee8}
+.room-amenities-editor{padding:34px}
+.room-editor-heading{padding-bottom:28px}
+.room-editor-heading-actions{display:flex;align-items:center;gap:12px}
+.room-amenities-delete-button{min-height:34px;padding:0 10px;border:1px solid #e4bcbc;border-radius:8px;background:#fff2f0;color:#a53d3d;font-size:.62rem;font-weight:700;cursor:pointer}
+.room-amenities-delete-button:hover{background:#fbeceb}
+.room-amenities-form-grid{gap:20px;margin:28px 0}
+.amenities-management-panel{margin-top:30px;padding:26px 0 0}
+.property-amenities-section{margin-top:34px;padding:34px}
+.property-amenities-heading{margin-bottom:25px}
+.property-amenities-heading-actions{display:flex;align-items:center;gap:10px}
+.property-amenities-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.property-amenity-card{grid-template-columns:32px 24px minmax(0,1fr) 25px;gap:10px;min-height:96px;padding:16px}
+.property-amenity-delete{align-self:start;width:25px;height:25px;border:1px solid #e4bcbc;border-radius:7px;background:#fff2f0;color:#a53d3d;font-size:1rem;line-height:1;cursor:pointer}
+.property-amenity-delete:hover{background:#fbeceb}
+.property-amenity-content label{font-size:.58rem}
+.property-amenity-content input{min-height:38px}
+.property-amenity-card.disabled .property-amenity-content input{background:#f7f4ef;color:#89848b}
+@media(max-width:1100px){.property-amenities-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.room-amenities-layout{grid-template-columns:1fr}.room-amenities-editor{padding:24px}.property-amenities-section{padding:24px}}
+@media(max-width:600px){.property-amenities-grid{grid-template-columns:1fr}.room-amenities-editor{padding:20px}}
+@media(max-width:600px){.room-editor-heading-actions,.property-amenities-heading-actions{align-items:flex-start;flex-direction:column}.room-editor-heading-actions img{width:58px;height:58px}}
+.room-amenities-page{min-height:100vh}.room-amenities-page .admin-welcome h1{max-width:680px}.room-amenities-success{margin-bottom:24px;padding:13px 16px;border:1px solid #c7e5cd;border-radius:10px;background:#edf8ef;color:#28643b;font-size:.78rem}.room-amenities-layout{display:grid;grid-template-columns:270px minmax(0,1fr);gap:24px;align-items:start}.room-amenities-list,.room-amenities-editor{border:1px solid #ece5da;border-radius:20px;background:#fffdf8;box-shadow:0 14px 34px rgba(27,26,65,.07)}.room-amenities-list{padding:22px}.room-amenities-list-heading span,.room-editor-heading>div>span,.amenities-panel-heading span,.selected-amenities>span{color:#9a5c52;font-size:.63rem;font-weight:700;letter-spacing:.14em}.room-amenities-list-heading h2{margin:5px 0 18px;color:#1b1a41;font-family:"Cormorant Garamond",serif;font-size:1.9rem}.room-selection-list{display:flex;flex-direction:column;gap:8px}.room-selection-item{display:grid;grid-template-columns:35px 1fr auto;align-items:center;gap:9px;width:100%;min-height:58px;padding:8px;border:1px solid transparent;border-radius:12px;background:transparent;color:#1b1a41;text-align:left;cursor:pointer}.room-selection-item img{width:33px;height:33px;object-fit:contain}.room-selection-item span{font-size:.69rem;font-weight:700}.room-selection-item small{color:#89848b;font-size:.62rem}.room-selection-item:hover{background:#faf3eb}.room-selection-item.active{border-color:#e3cfc0;background:#f8eee8;box-shadow:inset 3px 0 #9a5c52}.room-amenities-editor{padding:30px}.room-editor-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding-bottom:24px;border-bottom:1px solid #eee7dd}.room-editor-heading h2{margin:6px 0 0;color:#1b1a41;font-family:"DM Serif Display",serif;font-size:2.2rem;font-weight:400}.room-editor-heading p{margin:7px 0 0;color:#716e78;font-size:.75rem}.room-editor-heading img{width:78px;height:78px;padding:12px;border-radius:16px;background:#f7eee6;object-fit:contain}.room-amenities-form-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:16px;margin:25px 0}.room-amenities-form-grid label,.room-amenities-description{display:flex;flex-direction:column;gap:7px;color:#2b2b2b;font-size:.72rem;font-weight:700}.room-amenities-form-grid input,.room-amenities-description textarea{width:100%;border:1px solid #ddd5c8;border-radius:9px;background:#fff;color:#2b2b2b;outline:none;padding:0 12px}.room-amenities-form-grid input{height:45px}.room-amenities-description textarea{padding:12px;resize:vertical;line-height:1.6}.room-amenities-form-grid input:focus,.room-amenities-description textarea:focus{border-color:#9a5c52;box-shadow:0 0 0 4px rgba(154,92,82,.08)}.amenities-management-panel{margin-top:26px;padding-top:25px;border-top:1px solid #eee7dd}.amenities-panel-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:15px}.amenities-panel-heading h3{margin:5px 0 0;color:#1b1a41;font-family:"Cormorant Garamond",serif;font-size:1.7rem}.amenities-panel-heading p{margin:4px 0 0;color:#89848b;font-size:.7rem}.amenities-panel-heading strong{padding:7px 10px;border-radius:8px;background:#f6f0f7;color:#62516b;font-size:.63rem}.amenities-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:20px 0}.amenity-checkbox{display:flex;align-items:center;gap:9px;min-height:43px;padding:9px 11px;border:1px solid #e5ddd3;border-radius:9px;background:#fff;color:#5f5a63;font-size:.68rem;cursor:pointer}.amenity-checkbox.selected{border-color:#d6b7aa;background:#f8eee8;color:#7d0000;font-weight:700}.amenity-checkbox input{accent-color:#7d0000}.custom-amenity-input{display:flex;gap:9px;margin-top:17px}.custom-amenity-input input{flex:1;min-height:43px;padding:0 12px;border:1px solid #ddd5c8;border-radius:9px;outline:none}.custom-amenity-input button,.room-amenities-actions button{min-height:43px;padding:0 15px;border:1px solid #d9d1c7;border-radius:9px;background:#fff;color:#1b1a41;font-size:.68rem;font-weight:700;cursor:pointer}.custom-amenity-input button:hover{border-color:#9a5c52}.selected-amenities{margin-top:25px}.selected-amenities-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.selected-amenity{display:flex;align-items:center;gap:7px;padding:6px 8px;border-radius:8px;background:#f6f0f7;color:#62516b;font-size:.64rem}.selected-amenity button{border:0;background:transparent;color:#62516b;font-size:1rem;line-height:1;cursor:pointer}.room-amenities-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:28px;padding-top:20px;border-top:1px solid #eee7dd}.room-amenities-save{border-color:#1b1a41!important;background:#1b1a41!important;color:#fff7e1!important}.room-amenities-actions button:hover{transform:translateY(-1px)}@media(max-width:1050px){.room-amenities-layout{grid-template-columns:1fr}.room-selection-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.amenities-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.room-amenities-editor{padding:20px}.room-amenities-form-grid,.amenities-grid{grid-template-columns:1fr}.room-selection-list{grid-template-columns:1fr}.amenities-panel-heading{flex-direction:column}.custom-amenity-input{flex-direction:column}.custom-amenity-input button{width:100%}}
